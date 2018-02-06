@@ -1,4 +1,5 @@
 ﻿using ADllWithExport.Contract;
+using AsyncMefLauncher.ADllWithExport.Contract;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition.Hosting;
@@ -30,32 +31,26 @@ namespace ConsoleApp1
             ((a, b) => a + "\\" + b)
                                 , "\\", "Assemblies");
 
-                //Load parts from the available DLLs in the specified path 
-                //using the directory catalog
-                var directoryCatalog = new DirectoryCatalog(directoryPath, "*.dll");
-                Console.WriteLine($"{watch.ElapsedMilliseconds}\t directory catalog loaded");
-                //Load parts from the current assembly if available
-                var asmCatalog = new AssemblyCatalog(Assembly.GetExecutingAssembly());
-                Console.WriteLine($"{watch.ElapsedMilliseconds}\t Assembly catalog loaded");
-
-                //Add to the aggregate catalog
-                aggregateCatalog.Catalogs.Add(directoryCatalog);
-                aggregateCatalog.Catalogs.Add(asmCatalog);
-
+                foreach (var file in Directory.GetFiles(directoryPath,"*.dll"))
+                {
+                    var asmCatalog = new AsyncAssemblyCatalog(file);
+                    aggregateCatalog.Catalogs.Add(asmCatalog);
+                    Console.WriteLine($"{watch.ElapsedMilliseconds}\t {file} loaded");
+                }
                 //Crete the composition container
                 var container = new CompositionContainer(aggregateCatalog);
 
                 Console.WriteLine($"{watch.ElapsedMilliseconds}\t Composition container loaded");
                 // Composable parts are created here i.e. 
                 // the Import and Export components assembles here
-                container.Compose(new CompositionBatch());
+                    container.Compose(new CompositionBatch());
                 Console.WriteLine($"{watch.ElapsedMilliseconds}\t Composed");
 
                 container.GetExport<ITest>().Value.Run();
                 Console.WriteLine($"{watch.ElapsedMilliseconds}\t Run");
             }
             catch (Exception ex)
-            {
+                {
                 throw ex;
             }
 
