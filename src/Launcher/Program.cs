@@ -1,5 +1,6 @@
 ﻿using ADllWithExport.Contract;
 using AsyncMefLauncher.ADllWithExport.Contract;
+using Catalog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition.Hosting;

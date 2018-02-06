@@ -5,9 +5,9 @@ using System.ComponentModel.Composition.Primitives;
 using System.IO;
 using System.Linq;
 
-namespace ConsoleApp1
+namespace Catalog
 {
-    internal class AsyncAssemblyCatalog : ComposablePartCatalog, ICompositionElement
+    public class AsyncAssemblyCatalog : ComposablePartCatalog, ICompositionElement
     {
         private readonly string _file;
         AssemblyCatalog _internalCatalog = null;

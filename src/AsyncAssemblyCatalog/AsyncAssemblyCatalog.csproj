@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D75A5B7C-2694-42B4-8BCF-9781EB76032B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>AsyncMefLauncher</RootNamespace>
-    <AssemblyName>AsyncMefLauncher</AssemblyName>
+    <ProjectGuid>{3FCEF151-6122-4A1F-9DE5-4DF1DC04ED81}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AsyncAssemblyCatalog</RootNamespace>
+    <AssemblyName>AsyncAssemblyCatalog</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,21 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AsyncAssemblyCatalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ADllWithExport.Contract\ADllWithExport.Contract.csproj">
-      <Project>{2D6935BA-7823-4ECA-AD27-4EB1438168B6}</Project>
-      <Name>ADllWithExport.Contract</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AsyncAssemblyCatalog\AsyncAssemblyCatalog.csproj">
-      <Project>{3fcef151-6122-4a1f-9de5-4df1dc04ed81}</Project>
-      <Name>AsyncAssemblyCatalog</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

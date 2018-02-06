@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADllWithExport.Contract", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADllWithExport2", "ADllWithExport2\ADllWithExport2.csproj", "{A1D605D1-EF41-44C1-B334-BB461A657682}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMefTest", "AsyncMefTest\AsyncMefTest.csproj", "{D275FC04-D436-40E8-BEC0-D972B0473AEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAssemblyCatalog", "AsyncAssemblyCatalog\AsyncAssemblyCatalog.csproj", "{3FCEF151-6122-4A1F-9DE5-4DF1DC04ED81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{A1D605D1-EF41-44C1-B334-BB461A657682}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1D605D1-EF41-44C1-B334-BB461A657682}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1D605D1-EF41-44C1-B334-BB461A657682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D275FC04-D436-40E8-BEC0-D972B0473AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D275FC04-D436-40E8-BEC0-D972B0473AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D275FC04-D436-40E8-BEC0-D972B0473AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D275FC04-D436-40E8-BEC0-D972B0473AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FCEF151-6122-4A1F-9DE5-4DF1DC04ED81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FCEF151-6122-4A1F-9DE5-4DF1DC04ED81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FCEF151-6122-4A1F-9DE5-4DF1DC04ED81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FCEF151-6122-4A1F-9DE5-4DF1DC04ED81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
